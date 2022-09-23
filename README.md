@@ -1,5 +1,5 @@
 # Movement-Related-Cortical-Potential
-Official Code for STRCA, FBTRCA for Movement-Related Cortical Potential in the Brain-Computer Interface context
+##Official Code for STRCA, FBTRCA for Movement-Related Cortical Potential in the Brain-Computer Interface context
 
 Steps:
 
@@ -16,7 +16,9 @@ Steps:
 6.Run "experiment_bc_bSTRCA.m".
 
 7.Download the codes for feature selection method from 
+
   (1) https://www.mathworks.com/matlabcentral/fileexchange/56937-feature-selection-library
+  
   (2) https://github.com/sanjitsbatra/Minimal-Complexity-Machines-Feature-Selection/tree/master/KDD%20Code
   and extract files to the dir "external".
   
