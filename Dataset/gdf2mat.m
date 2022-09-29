@@ -10,6 +10,7 @@ CHANNEL=[1:2:5,15, 29:1:31, 45, 55:2:59, 84:90];
 % hand open; 89/90 
 % rest; 
 mkdir('RawData_MAT')
+mkdir('OData')
 for i=1:1
     for j=1:10
         if i<10
