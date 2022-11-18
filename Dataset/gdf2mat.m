@@ -27,12 +27,12 @@ for i=1:1
         disp(matpath)
         [s, h]=sload(gdfpath);
         s=s(:, CHANNEL)';
-        pos1=h.EVENT.POS(1:7:294);
-        pos2=h.EVENT.POS(7:7:294);
-        typ=h.EVENT.TYP(4:7:294)-1536;
+        pos1=h.EVENT.POS(1:4:168);
+        pos2=h.EVENT.POS(4:4:168);
+        typ=h.EVENT.TYP(4:4:168)-1536;
         data=zeros(size(CHANNEL, 2), h.SampleRate*10, size(h.TRIG, 1));
         for k=1:size(data, 3)
-            data(:, :, k)=s(:, pos1(k):pos2(k)-1+256*10);
+            data(:, :, k)=s(:, pos1(k):pos1(k)-1+h.SampleRate*10);
         end
         save(matpath, 'data', 'typ');
     end
