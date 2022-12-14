@@ -18,8 +18,8 @@ if __name__ == '__main__':
     epochs=100
     nfold=10
     use_cuda = torch.cuda.is_available()
-    accuracy_depthnet=np.zeros([15,nfold,10,epochs])
-    for sub in np.arange(15):
+    accuracy_depthnet=np.zeros([1,nfold,10,epochs])
+    for sub in np.arange(1):
         dataset=Dataset(7, 768)
         dataset.load_data(sub+1, np.arange(10)+1)
         for n in range(nfold):
@@ -51,7 +51,6 @@ if __name__ == '__main__':
 
                 for epoch in tqdm(range(epochs),desc="Sub"+str(sub)+"Nfold"+str(n)+"Fbank"+str(fbank)):
                     train(model.block1[fbank], use_cuda, train_data_loader, optim, loss_fn)
-                    # accuracy_depthnet[sub,n,fbank,epoch] = test(model.block1[fbank], use_cuda, test_data_loader)
                     torch.save(model.block1[fbank].state_dict(), \
                         'SavedModel/ncomp3/Sub'+str(sub)+'Fold'+str(n)+'Epoch'+str(epoch+1)+\
                             'Fbank'+str(fbank)+'.pt')
