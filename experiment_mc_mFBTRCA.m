@@ -6,7 +6,7 @@ nsap=768;
 Fstart=0.5;
 Fend=1:10;
 nbank=10;
-accuracy_fbtrca=zeros(1,10,211);
+accuracy_fbtrca=zeros(1,10,210);
 for sub=1:1
     train_ind=cell(7,1);test_ind=cell(7,1);dataf=cell(7,1);
     for mn=0:6
@@ -76,16 +76,13 @@ for sub=1:1
         % feature selection with minimum redundancy maximum dependency
         train_data=reshape(train_data,size(train_data,1),210);
         test_data =reshape(test_data, size(test_data, 1),210);
-        model=fitcecoc(squeeze(train_data),train_label,'Learner','svm');
-        pred_label=predict(model,test_data);
-        accuracy_fbtrca(sub, n,1)=mean(pred_label(:)==test_label(:));
-            
+           
         itrain_data=myQuantileDiscretize(train_data,5);
         seqsorted=mRMR(itrain_data, train_label, 210);
         for nfea=1:210
             model=fitcecoc(squeeze(train_data(:,seqsorted(1:nfea))),train_label,'Learner','svm');
             pred_label=predict(model,test_data(:,seqsorted(1:nfea)));
-            accuracy_fbtrca(sub, n,nfea+1)=mean(pred_label(:)==test_label(:));
+            accuracy_fbtrca(sub, n,nfea)=mean(pred_label(:)==test_label(:));
         end
     end
 end
@@ -113,9 +110,6 @@ function ru=Pattern_CCP(X, mX, W)
     %W: channel*n_fea
     %tmp_mX:sample*channel*N_class
     %tmp_X: sample*channel*trial
-%     disp(size(X))
-%     disp(size(mX))
-%     disp(size(W))
     [n_spl,~, n_cls]=size(mX);
     
     [n_chn, ~]=size(W);
