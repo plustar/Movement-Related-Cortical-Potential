@@ -18,8 +18,8 @@ if __name__ == '__main__':
     epochs=100
     nfold=10
     use_cuda = torch.cuda.is_available()
-    accuracy_depthnet=np.zeros([15,nfold,10,epochs])
-    for sub in range(15):
+    accuracy_depthnet=np.zeros([1,nfold,10,epochs])
+    for sub in range(1):
         dataset=Dataset(7, 768)
         dataset.load_data(sub+1, np.arange(10)+1)
         for n in range(nfold):
@@ -62,4 +62,4 @@ if __name__ == '__main__':
                     time.sleep(0.001)
                     pass
 
-    savemat('accuracy_mc_twostepfbdepthnet.mat',{"accuracy_tfbdepthnet": accuracy_depthnet})
+    savemat('accuracy_mc_ttsnet.mat',{"accuracy_ttsnet": accuracy_depthnet})
