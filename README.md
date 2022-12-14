@@ -38,4 +38,4 @@ Please cite the following paper if you use the codes:
 [3] Hao Jia, Fan Feng, Feng Duan, et al. Towards Multi-Class Pre-Movement Classification. arXiv, October 6, 2022. http://arxiv.org/abs/2201.12157.
 
 
-[4] Hao Jia, Cesar F. Caiafa, Duan Feng, et al. Enabling Temporal-Spectral Decoding in Pre-movement Detection. https://www.researchgate.net/publication/366249892_Enabling_Temporal-Spectral_Decoding_in_Pre-movement_Detection
+[4] Hao Jia, Cesar F. Caiafa, Duan Feng, et al. Enabling Temporal-Spectral Decoding in Pre-movement Detection.
