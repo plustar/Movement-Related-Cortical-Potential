@@ -19,8 +19,8 @@ if __name__ == '__main__':
     epochs=100
     nfold=10
     use_cuda = torch.cuda.is_available()
-    accuracy_depthnet=np.zeros([15,nfold,epochs])
-    for sub in range(15):
+    accuracy_depthnet=np.zeros([1,nfold,epochs])
+    for sub in range(1):
         dataset=Dataset(7, 768)
         dataset.load_data(sub+1, np.arange(10)+1)
         for n in range(nfold):
@@ -55,4 +55,4 @@ if __name__ == '__main__':
                     model, use_cuda, test_data_loader)
                 time.sleep(0.001)
                 pass
-    savemat('accuracy_fbdegnet_matlab_engine.mat',{"accuracy_fbdegnet": accuracy_depthnet})
+    savemat('accuracy_otsnet.mat',{"accuracy_otsnet": accuracy_depthnet})
