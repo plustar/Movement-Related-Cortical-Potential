@@ -19,7 +19,7 @@ if __name__ == '__main__':
     use_cuda = torch.cuda.is_available()
     nfold=10
     accuracy_depthnet=np.zeros([15,nfold,epochs])
-    for sub in range(15):
+    for sub in range(1):
         dataset=Dataset(7, 768)
         dataset.load_data(sub+1, [10])
         for n in range(nfold):
