@@ -2,7 +2,7 @@ import numpy as np
 import h5py
 
 class Dataset(object):
-    def __init__(self, num_class, num_sample, databank='DataBank_Fourier') -> None:
+    def __init__(self, num_class, num_sample, databank='DataBank') -> None:
         self.data=[]
         self.train_index=[]
         self.test_index=[]
