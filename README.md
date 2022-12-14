@@ -1,6 +1,8 @@
 # Movement-Related-Cortical-Potential
 ##Official Code for STRCA, FBTRCA for Movement-Related Cortical Potential in the Brain-Computer Interface context
 
+##This is example codes of STRCA, FBTRCA, TTSNet, tested on the dataset that the movement onsets have been located and aligned.
+
 Steps:
 
 1.Download data from http://bnci-horizon-2020.eu/database/data-sets, 25. Upper limb movement decoding from EEG (001-2017); and extract files to the path "Dataset/RawData_GDF".
@@ -22,13 +24,15 @@ Steps:
   (2) https://github.com/sanjitsbatra/Minimal-Complexity-Machines-Feature-Selection/tree/master/KDD%20Code
   
   and extract files to the dir "external".
-  
-8.Run "experiment_bc_bFBTRCA.m".
 
 Notes: The second link to feature selection method contains the mRMR method and the code for quantile discretization. However, the memory increases when the mRMR method repeats in matlab code panel. When using the mRMR in this link many times, it is necessary to exit the current matlab programme and restart the panel. The alternate choice of mRMR is the first link.
+
+8.Run "experiment_bc_bFBTRCA.m" or other experiment files.
 
 Please cite the following paper if you use the codes:
 
 [1] Duan, F., Jia, H., Sun, Z. et al. Decoding Premovement Patterns with Task-Related Component Analysis. Cogn Comput 13, 1389–1405 (2021). https://doi.org/10.1007/s12559-021-09941-7
 
 [2] Jia, H., Sun, Z., Duan, F. et al. Improving Pre-movement Pattern Detection with Filter Bank Selection. https://www.researchgate.net/publication/358232676_Improving_Pre-movement_Pattern_Detection_with_Filter_Bank_Selection
+
+[3] 
