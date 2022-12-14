@@ -6,8 +6,8 @@ nsap=768;
 Fstart=0.5;
 Fend=1:10;
 nbank=10;
-accuracy_fbtrca=zeros(15,10,211);
-for sub=1:15
+accuracy_fbtrca=zeros(1,10,211);
+for sub=1:1
     train_ind=cell(7,1);test_ind=cell(7,1);dataf=cell(7,1);
     for mn=0:6
         % load shuffle index
@@ -89,7 +89,7 @@ for sub=1:15
         end
     end
 end
-save accuracy_fbtrca3.mat accuracy_fbtrca
+save accuracy_fbtrca.mat accuracy_fbtrca
 function [S,Q] = sptrca_SQ(eeg)
     [num_chans, num_smpls, num_trials]  = size(eeg);
     % Q
