@@ -4,9 +4,9 @@ nchn=11;
 nsap=768;
 Fstart=0.5;
 Fend=10;
-accuracy_strca=zeros(15,10,nchn,2);
+accuracy_strca=zeros(1,10,nchn,2);
 for ncomp=1:nchn
-    for sub=1:15
+    for sub=1:1
         disp([num2str(ncomp), ' ', num2str(sub)])
         train_ind=cell(7,1);test_ind=cell(7,1);dataf=cell(7,1);
         for mn=0:6
@@ -73,7 +73,7 @@ for ncomp=1:nchn
         end
     end
 end
-% save accuracy_strca.mat accuracy_strca
+save accuracy_strca.mat accuracy_strca
 function [S,Q] = sptrca_SQ(eeg)
     [num_chans, num_smpls, num_trials]  = size(eeg);
     % Q
@@ -117,16 +117,6 @@ function ru=Pattern_CCP(X, mX, W)
             tmpx2=squeeze(mean(tmp_mX(:,:,setdiff(1:n_cls, nc)), 3))-tmp_mX(:, :, nc);
             [A, ~]=canoncorr(tmpx1, tmpx2);
             ru(nt,nc, 3)=corr2(tmpx1*A, tmpx2*A);
-            
-%             ru(nt, 2,nc, 1)=corr2_r2(x, tmp_mX(:, :, nc));
-%             
-%             [~, B]=canoncorr(x, tmp_mX(:, :, nc));
-%             ru(nt, 2, nc, 2)=corr2_r2(x*B, tmp_mX(:, :, nc)*B);
-%             
-%             tmpx1=x-tmp_mX(:, :, nc);
-%             tmpx2=squeeze(mean(tmp_mX(:,:,setdiff(1:n_cls, nc)), 3))-tmp_mX(:, :, nc);
-%             [A, ~]=canoncorr(tmpx1, tmpx2);
-%             ru(nt, 2, nc, 3)=corr2_r2(tmpx1*A, tmpx2*A);
         end
     end
 end
