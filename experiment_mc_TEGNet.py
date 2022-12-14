@@ -19,7 +19,7 @@ if __name__ == '__main__':
     nfold=10
     use_cuda = torch.cuda.is_available()
     nfold=10
-    accuracy_depthnet=np.zeros([15,nfold,epochs])
+    accuracy_depthnet=np.zeros([1,nfold,epochs])
     for sub in range(1):
         dataset=Dataset(7, 768)
         dataset.load_data(sub+1, [10])
@@ -52,4 +52,4 @@ if __name__ == '__main__':
                     model, use_cuda, test_data_loader)
                 time.sleep(0.001)
                 pass
-    savemat('accuracy_mc_degnet_matlabengine.mat',{"accuracy_degnet": accuracy_depthnet})
+    savemat('accuracy_mc_tegnet.mat',{"accuracy_tegnet": accuracy_depthnet})
