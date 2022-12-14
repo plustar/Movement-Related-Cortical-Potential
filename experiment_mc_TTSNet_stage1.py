@@ -52,7 +52,7 @@ if __name__ == '__main__':
                 for epoch in tqdm(range(epochs),desc="Sub"+str(sub)+"Nfold"+str(n)+"Fbank"+str(fbank)):
                     train(model.block1[fbank], use_cuda, train_data_loader, optim, loss_fn)
                     torch.save(model.block1[fbank].state_dict(), \
-                        'SavedModel/ncomp3/Sub'+str(sub)+'Fold'+str(n)+'Epoch'+str(epoch+1)+\
+                        'SavedModel/Sub'+str(sub)+'Fold'+str(n)+'Epoch'+str(epoch+1)+\
                             'Fbank'+str(fbank)+'.pt')
                     time.sleep(0.001)
                     pass
