@@ -31,8 +31,11 @@ Notes: The second link to feature selection method contains the mRMR method and 
 
 Please cite the following paper if you use the codes:
 
-[1] Duan, F., Jia, H., Sun, Z. et al. Decoding Premovement Patterns with Task-Related Component Analysis. Cogn Comput 13, 1389–1405 (2021). https://doi.org/10.1007/s12559-021-09941-7
+[1] Feng Duan, Hao Jia, Zhe Sun, et al. Decoding Premovement Patterns with Task-Related Component Analysis. Cogn Comput 13, 1389–1405 (2021). https://doi.org/10.1007/s12559-021-09941-7
 
-[2] Jia, H., Sun, Z., Duan, F. et al. Improving Pre-movement Pattern Detection with Filter Bank Selection. https://www.researchgate.net/publication/358232676_Improving_Pre-movement_Pattern_Detection_with_Filter_Bank_Selection
+[2] Hao Jia, Zhe Sun, Feng Duan, et al. Improving Pre-movement Pattern Detection with Filter Bank Selection. J. Neural Eng. 19 066012. https://doi.org/10.1088/1741-2552/ac9e75
 
-[3] 
+[3] Hao Jia, Fan Feng, Feng Duan, et al. Towards Multi-Class Pre-Movement Classification. arXiv, October 6, 2022. http://arxiv.org/abs/2201.12157.
+
+
+[4] Hao Jia, Cesar F. Caiafa, Duan Feng, et al. Enabling Temporal-Spectral Decoding in Pre-movement Detection. https://www.researchgate.net/publication/366249892_Enabling_Temporal-Spectral_Decoding_in_Pre-movement_Detection
