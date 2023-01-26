@@ -28,7 +28,7 @@ for movement=[2]%[0,1,6]
                 nn(:,i)=sf(1:512)-sf.d;
             end
 
-            [c,r]=find(nn>=0.1);
+            [c,r]=find(abs(nn)>=0.1);
             [tmpc, tmpr]=unique(r, 'first');
             locat=zeros(60,1);
             locat(tmpc)=c(tmpr);
