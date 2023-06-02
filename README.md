@@ -27,15 +27,17 @@ Steps:
 
 Notes: The second link to feature selection method contains the mRMR method and the code for quantile discretization. However, the memory increases when the mRMR method repeats in matlab code panel. When using the mRMR in this link many times, it is necessary to exit the current matlab programme and restart the panel. The alternate choice of mRMR is the first link.
 
-8.Run "experiment_bc_bFBTRCA.m" or other experiment files.
+8.Run "experiment_bc_bFBTRCA.m" or other experiment files. The code adpated for the nested cross validation will be updated soon...
 
 Please cite the following paper if you use the codes:
 
-[1] Feng Duan, Hao Jia, Zhe Sun, et al. Decoding Premovement Patterns with Task-Related Component Analysis. Cogn Comput 13, 1389–1405 (2021). https://doi.org/10.1007/s12559-021-09941-7
+[1] Feng Duan, Hao Jia, Zhe Sun, et al. Decoding Premovement Patterns with Task-Related Component Analysis. Cognitive Computation, 2021. https://doi.org/10.1007/s12559-021-09941-7
 
-[2] Hao Jia, Zhe Sun, Feng Duan, et al. Improving Pre-movement Pattern Detection with Filter Bank Selection. J. Neural Eng. 19 066012. https://doi.org/10.1088/1741-2552/ac9e75
+[2] Feng Duan, Hao Jia, Zhiwen Zhang, et al. On the robustness of EEG tensor completion methods. Science China Technological Sciences, 2021. https://doi.org/10.1007/s11431-020-1839-5
 
-[3] Hao Jia, Fan Feng, Feng Duan, et al. Towards Multi-Class Pre-Movement Classification. arXiv, October 6, 2022. http://arxiv.org/abs/2201.12157.
+[3] Hao Jia, Zhe Sun, Feng Duan, et al. Improving Pre-movement Pattern Detection with Filter Bank Selection. Journal of Neural Engineering, 2022. https://doi.org/10.1088/1741-2552/ac9e75
 
+[4] Hao Jia, Fan Feng, Feng Duan, et al. Towards Multi-Class Pre-Movement Classification. IEEE Journal of Biomedical and Health Informatics, 2023. http://doi.org/10.1109/JBHI.2023.3278747
 
-[4] Hao Jia, Cesar F. Caiafa, Duan Feng, et al. Enabling Temporal-Spectral Decoding in Pre-movement Detection.
+[5] Hao Jia, Cesar F. Caiafa, Duan Feng, et al. Enabling Temporal-Spectral Decoding in Pre-movement Detection. 
+https://doi.org/10.48550/arXiv.2212.09304
